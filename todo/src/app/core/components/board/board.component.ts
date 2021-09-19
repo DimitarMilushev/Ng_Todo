@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ITask } from '../../models/Task';
+import { TasksService } from '../../services/tasks/tasks.service';
 
 @Component({
   selector: 'app-board',
@@ -6,13 +8,18 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
+  tasksList: Array<ITask>;
 
-  constructor() { }
-
-  ngOnInit(): void {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
-      .then(json => console.log(json))
+  constructor(
+    private tasksService: TasksService
+  ) {
+    this.tasksList = [];
   }
 
+  async ngOnInit(): Promise<void> {
+    const userId: number = 1;
+    this.tasksList = await this.tasksService.getUserTasks(userId.toString());
+    
+    console.log(this.tasksList);
+  }
 }
