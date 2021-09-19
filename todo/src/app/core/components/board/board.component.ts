@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Status } from '../../enums/Status';
 import { ITask } from '../../models/Task';
 import { TasksService } from '../../services/tasks/tasks.service';
 
@@ -22,4 +23,8 @@ export class BoardComponent implements OnInit {
     
     console.log(this.tasksList);
   }
+
+  getNewTasks = () => this.tasksList.filter(t => t.status === Status.New);
+
+  getCompletedTasks = () => this.tasksList.filter(t => t.status === Status.Completed);
 }
