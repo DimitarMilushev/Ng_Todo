@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BoardComponent } from './components/todo-board/board/board.component';
-import { TaskComponent } from './components/todo-board/task/task.component';
+import { BoardComponent } from './core/components/board/board.component';
+import { TaskComponent } from './core/components/task/task.component';
 
 @NgModule({
   declarations: [
