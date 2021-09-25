@@ -1,14 +1,18 @@
 <div class="board">
     <div class="list">
         <div class="list-title" id="New">New</div>
+        <div class="list-tasks">
             <div *ngFor="let task of getNewTasks()">
                 <task [title]='task.title' [status]='task.status'></task>
             </div>
+        </div>
     </div>
     <div class="list">
         <div class="list-title" id="Completed">Completed</div>
+        <div class="list-tasks">
             <div *ngFor="let task of getCompletedTasks()">
                 <task [title]='task.title' [status]='task.status'></task>
             </div>
+        </div>
     </div>
 </div>

@@ -2,7 +2,20 @@
     max-width: 400px;
     min-height: 200px;
     background-color: white;
-    margin-bottom: 24px;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    margin: 2vh 1vw 2vh 1vw;
+    mat-card-header {   
+        min-height: 25px;
+        border-bottom: 1px solid rgb(170, 165, 165);
+    }
+    mat-card-content {
+        min-height: 150px;
+        border-bottom: 1px solid rgb(170, 165, 165);
+        padding: 10px 10px 10px 10px;
+        margin-bottom: 0 !important;
+    }
+    mat-card-footer {
+        color:rgb(170, 165, 165);
+        padding: 10px 10px 10px 16px;
+        min-height: 25px;
+    }
 }

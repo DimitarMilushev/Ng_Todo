@@ -9,10 +9,12 @@ import { Status } from '../../enums/Status';
 export class TaskComponent implements OnInit {
   @Input() title: string;
   @Input() status: Status;
+  date: Date;
 
   constructor() {
     this.title = '';
     this.status = Status.New;
+    this.date = new Date;
    }
 
   ngOnInit(): void {
