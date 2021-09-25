@@ -1,9 +1,8 @@
 .task {
     max-width: 400px;
     min-height: 200px;
-    background-color: white;
     margin: 2vh 1vw 2vh 1vw;
-    mat-card-header {   
+    mat-card-header {
         min-height: 25px;
         border-bottom: 1px solid rgb(170, 165, 165);
     }
@@ -14,8 +13,11 @@
         margin-bottom: 0 !important;
     }
     mat-card-footer {
-        color:rgb(170, 165, 165);
+        color: rgb(170, 165, 165);
         padding: 10px 10px 10px 16px;
         min-height: 25px;
     }
+}
+.task:hover {
+    box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.28) !important;
 }
