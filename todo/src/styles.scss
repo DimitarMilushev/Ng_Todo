@@ -2,3 +2,14 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+h2 {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+p {
+    font-size: 1vw;
+}
+button#addTask {
+    height: 1vh;
+    width: 2vw;
+}

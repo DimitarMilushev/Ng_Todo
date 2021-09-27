@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Status } from '../../enums/Status';
+import { Status } from 'src/app/core/enums/Status';
 
 @Component({
   selector: 'task',

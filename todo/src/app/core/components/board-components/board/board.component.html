@@ -1,0 +1,15 @@
+<section id="board">
+    <div *ngFor="let list of lists"class="list">
+        <div class="list-title" id="{{list.name}}">{{list.name}}</div>
+        <div class="list-components">
+            <div cdkDropListGroup class="list-tasks">
+                <div cdkDropList *ngFor="let task of list.tasks">
+                    <task [title]='task.title' [status]='task.status'></task>
+                </div>
+            </div>
+            <div class="list-actions">
+                <add-button [text]="'Add Task'"></add-button>
+            </div>
+        </div>
+    </div>  
+</section>
